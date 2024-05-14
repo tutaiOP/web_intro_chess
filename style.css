@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.col-1 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 8.33333%;
+}
+
+.col-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.66667%;
+}
+
+
+.col-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 25%;
+}
+
+
+.col-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 33.33333%;
+}
+
+
+.col-5 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 41.66667%;
+}
+
+
+.col-6 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 50%;
+}
+
+
+.col-7 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 58.33333%;
+}
+
+
+.col-8 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 66.66667%;
+}
+
+.col-9 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 75%;
+}
+
+.col-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    position: relative;
+}
+.header .container {
+    display: flex;
+    background-color: black;
+    height: 100px;
+
+}
+
+.header .container .logo {
+    flex: 1;
+    
+}
+
+.logo img{
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.header .container .navbar {
+    flex: 2;
+   
+}
+
+.navbar .navbar-list {
+    list-style-type: none;
+    display: flex; /* Thêm thuộc tính display: flex */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.navbar .navbar-list .navbar-item {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+.navbar .navbar-list .navbar-item:hover a{
+    color: yellow;
+}
+
+.navbar .navbar-list .navbar-item a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 80px;
+    font-weight: 600;
+  }
+  
+
+
+.header .container .header-right {
+    flex: 1;
+    line-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right button {
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    width: 150px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+    background-image: linear-gradient(#ff006af7, #e99d00);
+}
+
+.ribbon {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    background-color: #ff006af7;
+}
+
+.content {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-show {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.list-images {
+    display: flex;
+   transition: 0.5s;
+}
+.btn:hover {
+    color: white;
+}
+.btn {
+    font-size: 45px;
+    color: #999;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-left {
+    left: 0;
+}
+.btn-right {
+    right: 0;
+}
+.index-images {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.index-item {
+    border: 2px solid #999;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 50%;
+}
+.active {
+    background-color: #999;
+}
+
+.title-name {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.description {
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.text-description {
+    text-align: center;
+}
+
+#downloadButton {
+    margin-top: 50px;
+    display: block; /* Đảm bảo button chiếm toàn bộ chiều ngang của phần tử cha */
+    margin: 0 auto;
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+   }
+   
+   #downloadButton::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+   }
+   
+   #downloadButton:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+   #downloadButton,
+   #downloadButton::after {
+    box-sizing: border-box;
+   }
+   
+   #downloadButton:active {
+    --border-width: 5px;
+   }
+
+
+
+.footer {
+    margin-top: 30px;
+    background-image: url(http://casino.themevivu.com/wp-content/uploads/2021/10/bg-footer.2a7d5bb.png);
+}
+
+.footer .footer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-img img {
+    width: 70%;
+}
+
+.footer .footer-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer ul {
+
+}
+
+.footer p,.footer ul li,.footer ul li a {
+    color: #ddc9a1;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.footer ul li {
+  padding: 5px 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+}
+
+.info .info-name {
+    color: #ffffff;
+}
+
+.info-name-ul li {
+    color: #ffffff;
+    margin: 5px 0;
+}
